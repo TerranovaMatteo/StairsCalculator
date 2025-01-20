@@ -1,0 +1,2 @@
+# StairsCalculator
+Stairs Calculator 
