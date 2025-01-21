@@ -1,5 +1,5 @@
 # StairsCalculator
-Matteo Terranova
+![alt text](static/images/homeImage.png)
 ## Overview
 StairsCalculator is a web application built with Flask that helps you calculate the dimensions of stairs based on a json user input.
 
