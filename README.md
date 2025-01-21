@@ -6,7 +6,7 @@ StairsCalculator is a web application built with Flask that helps you calculate 
 ## Features
 - Calculate the number of steps
 - Determine the height and depth of each step
-- insert additional input
+- insert additional input for limits
 
 ## Installation
 1. Clone the repository:
