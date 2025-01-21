@@ -52,5 +52,5 @@ StairsCalculator is a web application built with Flask that helps you calculate 
     ```bash
     python3 app.py
     ```
-2. Open your web browser and go to `http://127.0.0.1:5000`.
+- Open your web browser and go to `http://127.0.0.1:5000`.
 
