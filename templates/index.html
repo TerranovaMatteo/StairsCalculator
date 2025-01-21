@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stair Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Stair Calculator</h1>
+        <p>Our stair calculator helps you design and calculate the dimensions of your stairs easily and accurately.</p>
+        <h2>How to Use the Calculate-Stairs API</h2>
+        <ol>
+            <li>Send a POST request to the endpoint with a valid API Key on <code>/calculate-stairs</code> with the following JSON payload:
+                <pre>
+{
+    "height": 20,
+    "depth": 25,
+    "margin": 3, (optional)
+    "maxStepDepth": 35, (optional)
+    "minStepDepth": 25 (optional)
+    "maxStepHeight": 20, (optional)
+    "minStepHeight": 10, (optional)
+}
+                </pre>
+            </li>
+            <li>The API will respond with a JSON object containing the calculated dimensions of the stairs, such as:
+                <pre>
+{
+    "stepDepth": 12.5,
+    "stepHeight": 7.0,
+    "stepNum": 2
+}
+                </pre>
+            </li>
+            <li>Use the calculated dimensions to build your stairs.</li>
+        </ol>
+        <img src="{{ url_for('static', filename='images/homeImage.png') }}" alt="Home Image">
+    </div>
+</body>
+</html>

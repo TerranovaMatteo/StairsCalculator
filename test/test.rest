@@ -1,0 +1,139 @@
+@hostname = localhost
+
+@port = 5000
+
+@host = {{hostname}}:{{port}}
+
+### Calcolo Gradini 100h - 200d no API KEY
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Sbagliato
+
+{
+    "height": 100,
+    "depth": 200
+}
+
+### Calcolo Gradini 100h - 200d API KEY
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 100,
+    "depth": 200
+}
+
+### Calcolo Gradini 200h - 400d API KEY
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 200,
+    "depth": 400
+}
+
+
+### Calcolo Gradini 100h - 200d - margine 3 API KEY
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 100,
+    "depth": 200,
+    "margin": 3
+}
+
+### Test mancanza argomenti
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 100
+}
+
+### Test altezza e profondita fuori intervallo
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 50,
+    "depth": 10
+}
+
+### Calcolo Gradini con valori grandi 
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 1000,
+    "depth": 2000
+}
+
+### Test con altezza minima e profondita minima
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 10,
+    "depth": 25,
+    "minStepHeight": 10,
+    "minStepDepth": 25
+}
+
+### Test con altezza massima e profondita minima
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 20,
+    "depth": 25,
+    "maxStepHeight": 20,
+    "minStepDepth": 25
+}
+
+### Test con altezza minima e profondita massima definite
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 10,
+    "depth": 35,
+    "minStepHeight": 10,
+    "maxStepDepth": 35
+}
+
+### Test con altezza non valida e profondita massima definite
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 25,
+    "depth": 30,
+    "maxStepHeight": 10,
+    "minStepWidth": 25
+}
+
+### Test con altezza non valida e profondita massima definite
+POST http://{{host}}/calculate-stairs HTTP/1.1
+Content-Type: application/json
+X-API-KEY: Admin$00
+
+{
+    "height": 20,
+    "depth": 25,
+    "margin": 3, 
+    "maxStepDepth": 35, 
+    "minStepDepth": 25,
+    "maxStepHeight": 20, 
+    "minStepHeight": 10
+}
