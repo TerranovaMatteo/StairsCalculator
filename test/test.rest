@@ -43,7 +43,7 @@ X-API-KEY: Admin$00
 {
     "height": 100,
     "depth": 200,
-    "margin": 3
+    "stairTread": 3
 }
 
 ### Test mancanza argomenti
@@ -131,7 +131,7 @@ X-API-KEY: Admin$00
 {
     "height": 20,
     "depth": 25,
-    "margin": 3, 
+    "stairTread": 3, 
     "maxStepDepth": 35, 
     "minStepDepth": 25,
     "maxStepHeight": 20, 

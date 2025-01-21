@@ -67,13 +67,13 @@ def calculate_stairs():
         larghezzaTotale = float(data['depth'])
         
         # valori facoltativi (cm)
-        piastrella = float(data.get('margin', 0))
+        piastrella = float(data.get('stairTread', 0))
         minAltezza = float(data.get('minStepHeight', 10))
         maxAltezza = float(data.get('maxStepHeight', 20))
         minProfondita = float(data.get('minStepDepth', 25))
         maxProfondita = float(data.get('maxStepDepth', 35))
     except ValueError:
-        return jsonify({"error": "Height, depth, margin, and limit values must be valid numbers."}), 400
+        return jsonify({"error": "Height, depth, stairTread, and limit values must be valid numbers."}), 400
     
     # Verifica che maxAltezza sia maggiore di minAltezza
     if maxAltezza <= minAltezza:
