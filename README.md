@@ -34,6 +34,14 @@ StairsCalculator is a web application built with Flask that helps you calculate 
     ```bash
     pip install -r requirements.txt
     ```
+## Setting Environment Variables
+ - Before running the application, you need to set up some environment variables. Create a `.env` file in the root directory of the project and add the following variables:
+    ```
+    SQLALCHEMY_DATABASE_URI=sqlite:///database_name.db
+    SECRET_KEY=secret
+    SQLALCHEMY_TRACK_MODIFICATIONS=False
+    ```
+    Replace `your_secret_key` with a secure key of your choice.
 
 ## Usage
 - On Windows:

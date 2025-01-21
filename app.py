@@ -83,8 +83,6 @@ def calculate_stairs():
     if maxProfondita <= minProfondita:
         return jsonify({"error": "Maximum step width must be greater than minimum step width."}), 400
     
-    
-    
     prefAltezza = (minAltezza + maxAltezza) / 2 # altezza preferita
     prefProfondita = (minProfondita + maxProfondita) / 2 # larghezza preferita
     
